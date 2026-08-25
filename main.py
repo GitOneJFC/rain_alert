@@ -47,7 +47,7 @@ for i in rec_index:
         connection.starttls()
         connection.login(MY_EMAIL1,MY_PASSWORD1)
         connection.sendmail(
-            from_addr = MY_EMAIL,
+            from_addr = MY_EMAIL1,
             to_addrs = list.email[i],
             msg = f"Subject: Happy Birthday!\n\n {text}"
         )
