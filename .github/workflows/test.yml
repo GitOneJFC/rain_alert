@@ -23,8 +23,8 @@ jobs:
 
       - name: Check secrets are configured
         env:
-          MY_EMAIL: ${{ secrets.MY_EMAIL1 }}
-          MY_PASSWORD: ${{ secrets.MY_PASSWORD1 }}
+          MY_EMAIL1: ${{ secrets.MY_EMAIL1 }}
+          MY_PASSWORD1: ${{ secrets.MY_PASSWORD1 }}
         run: |
           if [ -z "$MY_EMAIL1" ]; then
             echo "MY_EMAIL1 secret is not set!"
