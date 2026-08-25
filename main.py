@@ -45,7 +45,7 @@ for i in rec_index:
     print(text)
     with smtplib.SMTP('smtp.gmail.com', 587) as connection:
         connection.starttls()
-        connection.login(MY_EMAIL,MY_PASSWORD)
+        connection.login(MY_EMAIL1,MY_PASSWORD1)
         connection.sendmail(
             from_addr = MY_EMAIL,
             to_addrs = list.email[i],
