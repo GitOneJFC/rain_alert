@@ -11,8 +11,8 @@ import smtplib
 import os
 
 #GIT secrets:
-MY_EMAIL = os.environ.get("MY_EMAIL1")
-MY_PASSWORD = os.environ.get("MY_PASSWORD1")
+MY_EMAIL1 = os.environ.get("MY_EMAIL1")
+MY_PASSWORD1 = os.environ.get("MY_PASSWORD1")
 
 #TODO 1: Updating birthdays.csv
 #TODO 2: Check if today matches a birthday in the birthdays.csv
