@@ -10,6 +10,8 @@ import datetime as dt
 import smtplib
 import os
 
+FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true
+
 #GIT secrets:
 MY_EMAIL = os.environ.get("MY_EMAIL1")
 MY_PASSWORD = os.environ.get("MY_PASSWORD1")
