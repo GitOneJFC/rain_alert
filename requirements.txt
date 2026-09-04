@@ -2,4 +2,4 @@ pandas
 datetime
 requests
 twilio
-smtplist
+smtplib
