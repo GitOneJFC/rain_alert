@@ -35,7 +35,7 @@ URL_CURRENT = "https://api.openweathermap.org/data/2.5/weather"
 URL_5DAY = "https://api.openweathermap.org/data/2.5/forecast"
 
 parameters = {
-    'lat': MY_LAT,
+    'lat': 40,
     'lon': MY_LONG,
     'cnt': 4,
     'appid': API_KEY,
