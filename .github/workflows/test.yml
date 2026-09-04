@@ -43,8 +43,16 @@ jobs:
             echo "MY_PASSWORD is configured"
           fi
           
-          if [ -z "$OMW_API_KEY" ]; then
-            echo "OWM_API_KEY secret is not set!"
+          if [ -z "$MY_LAT" ]; then
+            echo ",MY_LAT secret is not set!"
+            echo "Go to Settings > Secrets > Actions and add it."
+            exit 1
+          else
+            echo "MY_LAT is configured"
+          fi
+          
+          if [ -z "$API_KEY" ]; then
+            echo "API_KEY secret is not set!"
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
