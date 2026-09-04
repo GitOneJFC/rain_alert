@@ -22,7 +22,7 @@ RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 account_sid = ""
 auth_token = ""
 
-MY_LAT = 40
+MY_LAT = os.environ.get('MY_LAT')
 MY_LONG = os.environ.get("MY_LONG")
 
 print(f"{MY_EMAIL}, {API_KEY}, {MY_LAT}")
@@ -35,7 +35,7 @@ URL_CURRENT = "https://api.openweathermap.org/data/2.5/weather"
 URL_5DAY = "https://api.openweathermap.org/data/2.5/forecast"
 
 parameters = {
-    'lat': 40,
+    'lat': MY_LAT,
     'lon': MY_LONG,
     'cnt': 4,
     'appid': API_KEY,
