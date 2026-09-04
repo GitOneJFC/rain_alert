@@ -22,8 +22,8 @@ RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 account_sid = ""
 auth_token = ""
 
-MY_LAT = os.environ.get("USER_LAT")
-MY_LONG = os.environ.get("USER_LONG")
+MY_LAT = os.environ.get("MY_LAT")
+MY_LONG = os.environ.get("MY_LONG")
 
 RAIN_LAT = 13
 RAIN_LONG = -110
