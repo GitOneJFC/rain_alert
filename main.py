@@ -7,7 +7,7 @@ import smtplib
 # import json
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-API_KEY = os.environ.get("OMW_API_KEY")
+API_KEY = os.environ.get("API_KEY")
 
 TWILIO_SMS = ""
 TWILIO_API_KEY = ""
