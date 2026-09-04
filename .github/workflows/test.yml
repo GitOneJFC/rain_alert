@@ -50,6 +50,7 @@ jobs:
             exit 1
           else
             echo "MY_LAT is configured"
+            echo "MY_LAT value: $MY_LAT"
           fi
           
           if [ -z "$API_KEY" ]; then
