@@ -22,7 +22,7 @@ RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 account_sid = ""
 auth_token = ""
 
-MY_LAT = os.environ.get("MY_LAT")
+MY_LAT = 40
 MY_LONG = os.environ.get("MY_LONG")
 
 print(f"{MY_EMAIL}, {API_KEY}, {MY_LAT}")
