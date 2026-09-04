@@ -12,8 +12,8 @@ API_KEY = os.environ.get("OMW_API_KEY")
 TWILIO_SMS = ""
 TWILIO_API_KEY = ""
 
-MY_EMAIL = os.environ.get("USER_EMAIL")
-MY_PASSWORD = os.environ.get("USER_PASSWORD")
+MY_EMAIL = os.environ.get("MY_EMAIL")
+MY_PASSWORD = os.environ.get("MY_PASSWORD")
 RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 
 
@@ -22,8 +22,8 @@ RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 account_sid = ""
 auth_token = ""
 
-MY_LAT = 40.231229
-MY_LONG = -83.036921
+MY_LAT = os.environ.get("USER_LAT")
+MY_LONG = os.environ.get("USER_LONG")
 
 RAIN_LAT = 13
 RAIN_LONG = -110
