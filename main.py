@@ -25,7 +25,7 @@ auth_token = ""
 MY_LAT = os.environ.get("MY_LAT")
 MY_LONG = os.environ.get("MY_LONG")
 
-print(f"{MY_EMAIL}, {API_KEY}, {MY_LAT})
+print(f"{MY_EMAIL}, {API_KEY}, {MY_LAT}")
 
 RAIN_LAT = 13
 RAIN_LONG = -110
