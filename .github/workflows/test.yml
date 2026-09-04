@@ -25,7 +25,8 @@ jobs:
         env:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
-          OMW_API_KEY: ${{ secrets.OWM_API_KEY }}
+          OMW_API_KEY: ${{ secrets.API_KEY }}
+          MY_LAT: ${{ secrets.MY_LAT }}
         run: |
           if [ -z "$MY_EMAIL" ]; then
             echo "MY_EMAIL secret is not set!"
