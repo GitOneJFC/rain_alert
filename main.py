@@ -7,14 +7,14 @@ import smtplib
 # import json
 
 #+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
-API_KEY = ""
+API_KEY = os.environ.get("OMW_API_KEY")
 
-TWILIO_SMS = 
+TWILIO_SMS = ""
 TWILIO_API_KEY = ""
 
-MY_EMAIL = ""
-MY_PASSWORD = ""
-RECIPIENT = ""
+MY_EMAIL = os.environ.get("USER_EMAIL")
+MY_PASSWORD = os.environ.get("USER_PASSWORD")
+RECIPIENT = os.environ.get("RECIPIENT_EMAIL")
 
 
 # Find your Account SID and Auth Token at twilio.com/console
@@ -33,8 +33,8 @@ URL_CURRENT = "https://api.openweathermap.org/data/2.5/weather"
 URL_5DAY = "https://api.openweathermap.org/data/2.5/forecast"
 
 parameters = {
-    'lat': RAIN_LAT,
-    'lon': RAIN_LONG,
+    'lat': MY_LAT,
+    'lon': MY_LONG,
     'cnt': 4,
     'appid': API_KEY,
 }
@@ -57,27 +57,27 @@ for hour in data['list']:
         rain12 = True
 # print(condition_list)
 ####################################NOTIFY BY TWILIO
-if rain12:
-    client = Client(account_sid, auth_token)
-    message = client.messages.create(
-        to="whatsapp:",
-        from_="whatsapp:",
-        body="test",
-    )
-    print(message.status)
-# "sms_internal_alerts"
-# "It's going to rain today. Remember to bring an Umbrella!☂️"
+# if rain12:
+#     client = Client(account_sid, auth_token)
+#     message = client.messages.create(
+#         to="whatsapp:",
+#         from_="whatsapp:",
+#         body="test",
+#     )
+#     print(message.status)
+# # "sms_internal_alerts"
+# # "It's going to rain today. Remember to bring an Umbrella!☂️"
 
 # #####################NOTIFY BY EMAIL###########################
-# if rain12:
-#     with smtplib.SMTP('smtp.gmail.com', 587) as connection:
-#         connection.starttls()
-#         connection.login(user=MY_EMAIL, password=MY_PASSWORD)
-#         connection.sendmail(
-#             from_addr=MY_EMAIL,
-#             to_addrs='',
-#             msg = f"Subject: Weather Alert!\n\n Look Up! t's going to rain today. Remember to bring an Umbrella!"
-#         )
+if rain12:
+    with smtplib.SMTP('smtp.gmail.com', 587) as connection:
+        connection.starttls()
+        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+        connection.sendmail(
+            from_addr=MY_EMAIL,
+            to_addrs=RECIPIENT,
+            msg = f"Subject: Weather Alert!\n\n Look Up! t's going to rain today. Remember to bring an Umbrella!"
+        )
 
 ################################NOTIFY BY WHATSAPP AND TWILIO#############################
 
