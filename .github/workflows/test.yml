@@ -25,7 +25,7 @@ jobs:
         env:
           MY_EMAIL: ${{ secrets.MY_EMAIL }}
           MY_PASSWORD: ${{ secrets.MY_PASSWORD }}
-          OMW_API_KEY: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
           MY_LAT: ${{ secrets.MY_LAT }}
         run: |
           if [ -z "$MY_EMAIL" ]; then
@@ -57,7 +57,7 @@ jobs:
             echo "Go to Settings > Secrets > Actions and add it."
             exit 1
           else
-            echo "OMW_API_KEY is configured"
+            echo "API_KEY is configured"
           fi
 
           echo ""
